@@ -10,7 +10,7 @@
 *.dylib
 /cmake-build-debug
 /cmake-build-release
-
+/.idea
 # Qt-es
 object_script.*.Release
 object_script.*.Debug

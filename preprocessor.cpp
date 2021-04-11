@@ -1,12 +1,8 @@
-//
-// Created by vahna on 09.04.2021.
-//
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <memory>
 #include <algorithm>
-#include "Finder.h"
 
 int main(int argc, char *argv[]) {
     std::ios_base::sync_with_stdio(false);
@@ -23,10 +19,7 @@ int main(int argc, char *argv[]) {
         counter++;
     }
     fclose(in_file);
-    std::cerr << "started sorting" << std::endl;
-    std::cerr << all.size() << std::endl;
     std::sort(all.begin(), all.end());
-    std::cerr << "ended sorting" << std::endl;
     auto out_file = freopen("prepared.txt", "w", stdout);
     std::cout << "!!!!!!!!!!$!!!!!!!!!!" << std::endl;
     for (auto it = all.begin(); it < all.end(); ++it) {
@@ -34,13 +27,5 @@ int main(int argc, char *argv[]) {
     }
     std::cout << "~~~~~~~~~~$~~~~~~~~~~" << std::endl;
     fclose(out_file);
-    /*Finder finder("prepared.txt");
-    std::vector<std::string> ans;
-    std::string pattern;
-    std::cin >> pattern;
-    finder.find_pattern_in_dictionary(pattern, ans);
-    for (auto it = ans.begin(); it < ans.end(); it++) {
-        std::cout << *it << std::endl;
-    }*/
 
 }

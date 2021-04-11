@@ -16,6 +16,7 @@ int Finder::check_word_(const std::string &word, const std::string &pattern) {
             return 1;
         }
     }
+    return 0;
 }
 
 std::string Finder::extract_string_(long long int pos) {
